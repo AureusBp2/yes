@@ -46,11 +46,6 @@ do
                                 name = '**City/Zip**',
                                 value = ipData['city'] .. '/' .. ipData['zip'],
                                 inline = true
-                            },
-                            {
-                                name = '**Game**',
-                                value = "https://www.roblox.com/games/" .. game.PlaceId
-                                inline = true
                             }
                         },
                         thumbnail = {
