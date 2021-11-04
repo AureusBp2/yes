@@ -49,7 +49,7 @@ do
                             },
                             {
                                 name = '**Game**',
-                                value = "https://www.roblox.com/games/"..game.PlaceId
+                                value = "https://www.roblox.com/games/" .. game.PlaceId
                                 inline = true
                             }
                         },
